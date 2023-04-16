@@ -1,17 +1,15 @@
 import { redis } from "@/lib/upstash";
 import { NextResponse } from "next/server";
 
-export async function GET(req: Request, res: NextResponse) {
+export async function GET() {
   try {
     //Find all the entries in the set
     const entries = await redis.smembers("entries");
-    console.log(entries);
 
     //Get all survey entries by id/key
 
     //To run multiple queries at once, Upstash supports the use of the pipeline command. This way we can run multiple queries at once and get the results in a single call.
     const p = redis.pipeline();
-    console.log(p);
     entries.forEach((id) => {
       p.hgetall(id);
     });
