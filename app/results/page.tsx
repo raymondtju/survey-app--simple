@@ -10,7 +10,9 @@ export type SurveyData = {
 async function Results() {
   const res = await fetch(
     `${
-      process.env.NODE_ENV == "development" ? "http://localhost:3000" : ""
+      process.env.NODE_ENV == "development"
+        ? "http://localhost:3000"
+        : "https://survey-app-simple.vercel.app"
     }/results/api`,
     {
       cache: "no-cache",
