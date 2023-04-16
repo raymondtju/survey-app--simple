@@ -7,6 +7,7 @@ interface ResultsSectionProps {
 }
 
 const ResultsSection: React.FC<ResultsSectionProps> = ({ data }) => {
+  if (!data) return null;
   return (
     <div className="w-full space-y-4">
       {data.map((item, id) => (

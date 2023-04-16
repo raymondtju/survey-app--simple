@@ -13,7 +13,7 @@ export default async function Results() {
 
   return (
     <main className="items-center max-w-md min-h-screen px-4 pt-24 mx-auto overflow-hidden">
-      <ResultsSection data={data.data} />
+      <ResultsSection data={data} />
     </main>
   );
 }

@@ -3,7 +3,7 @@ export default async function getResults() {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/results/api`);
     const data = await res.json();
     console.log(res);
-    return data;
+    return data.data;
   } catch (error) {
     return null;
   }
