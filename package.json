@@ -1,7 +1,11 @@
 {
-  "name": "survey-app--upstash",
-  "version": "0.1.0",
-  "private": true,
+  "name": "survey-app--simple",
+  "version": "1.0.0",
+  "description": "Simple survey app using Upstash Redis and Next.js",
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,6 +16,7 @@
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "@upstash/redis": "^1.20.3",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
@@ -21,5 +26,9 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true
 }
