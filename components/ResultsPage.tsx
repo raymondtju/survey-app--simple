@@ -13,8 +13,8 @@ export default function ResultsPage() {
   return (
     <div>
       {" "}
-      {surveyData.map((data) => (
-        <div key={data.id}>
+      {surveyData.map((data, id) => (
+        <div key={id}>
           <p>
             <strong> Rating: </strong> {data.rating}{" "}
           </p>{" "}
