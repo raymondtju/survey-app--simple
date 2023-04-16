@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-export default function ResultsPage() {
+const ResultsPage = () => {
   const [surveyData, setSurveyData] = useState([]);
 
   useEffect(() => {
@@ -28,4 +27,6 @@ export default function ResultsPage() {
       ))}{" "}
     </div>
   );
-}
+};
+
+export default ResultsPage;
