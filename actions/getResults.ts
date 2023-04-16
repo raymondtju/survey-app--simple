@@ -1,6 +1,6 @@
 export default async function getResults() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/results`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/results/api`, {
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       // next: {
       //   revalidate: 1,
