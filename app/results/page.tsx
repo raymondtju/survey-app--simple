@@ -8,6 +8,8 @@ export type SurveyData = {
   comment: string;
 };
 
+export const revalidate = 0;
+
 export default async function Results() {
   const data = await getResults();
 
