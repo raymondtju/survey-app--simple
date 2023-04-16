@@ -1,5 +1,6 @@
 import React from "react";
 import ResultsSection from "@/components/pages/results/ResultsSection";
+import getResults from "@/actions/getResults";
 
 export type SurveyData = {
   rating: number;
@@ -7,28 +8,12 @@ export type SurveyData = {
   comment: string;
 };
 
-async function Results() {
-  const res = await fetch(
-    `${
-      process.env.NODE_ENV == "development"
-        ? "http://localhost:3000"
-        : "https://survey-app-simple.vercel.app"
-    }/results/api`,
-    {
-      cache: "no-cache",
-    }
-  );
-  const json = await res.json();
-
-  if (!json) {
-    return <div>Something went wrong</div>;
-  }
+export default async function Results() {
+  const data = await getResults();
 
   return (
-    <section className="items-center max-w-md min-h-screen px-4 pt-24 mx-auto overflow-hidden">
-      <ResultsSection data={json.data} />
-    </section>
+    <main className="items-center max-w-md min-h-screen px-4 pt-24 mx-auto overflow-hidden">
+      <ResultsSection data={data.data} />
+    </main>
   );
 }
-
-export default Results;

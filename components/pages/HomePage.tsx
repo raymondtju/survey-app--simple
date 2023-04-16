@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactEventHandler } from "react";
+import React from "react";
 
 const HomePage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

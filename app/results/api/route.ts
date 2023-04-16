@@ -1,7 +1,7 @@
 import { redis } from "@/lib/upstash";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(req: Request) {
   try {
     //Find all the entries in the set
     const entries = await redis.smembers("entries");

@@ -5,5 +5,5 @@ export default function ResultsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return <div>{children}</div>;
 }
