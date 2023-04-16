@@ -14,21 +14,14 @@ const HomePage: React.FC = () => {
       comment: form.comment.value,
     };
 
-    await fetch(
-      `${
-        process.env.NODE_ENV == "development"
-          ? "http://localhost:3000"
-          : "https://survey-app-simple.vercel.app"
-      }/api/submit`,
-      {
-        body: JSON.stringify(data),
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      }
-    );
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/submit`, {
+      body: JSON.stringify(data),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
 
     alert("Thank you for your feedback!");
   };
