@@ -4,7 +4,6 @@ export default async function getResults() {
       cache: "no-cache",
     });
     const data = await res.json();
-    console.log(res);
     return data.data;
   } catch (error) {
     return null;

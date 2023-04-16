@@ -1,4 +1,4 @@
-import { redis } from "@/lib/upstash";
+import redis from "@/lib/upstash";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
