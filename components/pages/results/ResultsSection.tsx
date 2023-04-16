@@ -1,3 +1,5 @@
+"use client";
+
 import { SurveyData } from "@/app/results/page";
 
 interface ResultsSectionProps {

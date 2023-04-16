@@ -1,5 +1,4 @@
-import React, { Suspense } from "react";
-import Loading from "./loading";
+import React from "react";
 
 export default function ResultsLayout({
   children,
