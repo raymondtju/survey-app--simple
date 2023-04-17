@@ -1,8 +1,10 @@
 import React from "react";
 import ResultsSection from "@/components/pages/results/ResultsSection";
 import getResults from "@/actions/getResults";
+import useResults from "@/actions/useResults";
 
 export type SurveyData = {
+  id: string;
   rating: number;
   recommendation: string;
   comment: string;

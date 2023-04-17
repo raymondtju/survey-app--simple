@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <nav className="max-w-md mx-auto mt-24">
+        <nav className="max-w-md mx-auto mt-12">
           <ul className="flex justify-center gap-4">
             <li>
               <a href="/" className="underline underline-offset-2">

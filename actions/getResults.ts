@@ -5,7 +5,9 @@ export default async function getResults() {
       // next: {
       //   revalidate: 1,
       // },
+      method: "GET", // *GET, POST, PUT, DELETE, etc.
     });
+
     const data = await res.json();
     return data.data;
   } catch (error) {
