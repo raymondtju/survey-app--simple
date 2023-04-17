@@ -22,7 +22,7 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ data }) => {
       {dataa?.data?.map((item: SurveyData) => (
         <div
           key={item.id}
-          className="relative px-4 py-2 border-2 border-black rounded-lg"
+          className="relative px-5 py-3 rounded-xl bg-slate-100"
         >
           <p>
             <span className="font-bold"> Rating: </span> {item.rating}
@@ -52,9 +52,9 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ data }) => {
               mutate();
               deleteSurvey();
             }}
-            className="absolute px-2 py-1 text-sm text-white bg-red-500 rounded-lg top-2 right-2"
+            className="absolute p-0.5 text-sm font-bold text-red-400 border-2 border-red-400 rounded-3xl top-3 right-3"
           >
-            del
+            D
           </button>
         </div>
       ))}
